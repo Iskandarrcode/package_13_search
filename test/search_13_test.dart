@@ -2,15 +2,18 @@ import 'package:search_13/search_13.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('A group of tests', () {
-    final awesome = Awesome();
+  test('Linear Search Test', () {
+    expect(SearchAlgorithms.linearSearch([1, 2, 3, 4, 5], 3), 2);
+    expect(SearchAlgorithms.linearSearch([1, 2, 3, 4, 5], 6), -1);
+  });
 
-    setUp(() {
-      // Additional setup goes here.
-    });
+  test('Binary Search Test', () {
+    expect(SearchAlgorithms.binarySearch([1, 2, 3, 4, 5], 3), 2);
+    expect(SearchAlgorithms.binarySearch([1, 2, 3, 4, 5], 6), -1);
+  });
 
-    test('First Test', () {
-      expect(awesome.isAwesome, isTrue);
-    });
+  test('Jump Search Test', () {
+    expect(SearchAlgorithms.jumpSearch([1, 2, 3, 4, 5], 3), 2);
+    expect(SearchAlgorithms.jumpSearch([1, 2, 3, 4, 5], 6), -1);
   });
 }
